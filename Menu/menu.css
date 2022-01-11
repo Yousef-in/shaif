@@ -1,0 +1,14 @@
+.our-menu .dis-col{
+  min-width:48% ;
+}
+.our-menu{
+  margin-bottom: 10%;
+}
+.dishes .container div{
+  margin-bottom: 3%;
+}
+.dishes .container div{
+  animation-name: to-up;
+  animation-duration: var(--animation-duration);
+  transform: translateZ(0);
+}

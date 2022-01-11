@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 body{
   background-color: var(--lightGreen-2);
 }
@@ -17,6 +20,7 @@ body{
   --black-2: #3f3c3c;
   --black-3: #5b6359;
   --white-1: #e8e8e8;
+  --animation-duration:1s;
 }
 .container{
   width: 1440px;
@@ -51,6 +55,9 @@ a{
   padding: 10px 15px;
   border-radius: 8px;
   font-size: 25px;
+}
+header, section, footer{
+  overflow: hidden;
 }
 /*============== main Rule ==============*/
 /*============== navigation ==============*/
@@ -880,3 +887,59 @@ footer img{
   }
 }
 /*============== footer ==============*/
+/*============== animation ==============*/
+.info  .container,
+.specials  .container,
+.dishes  .container .dis-row,
+.dishes  .container h2,
+.discont  .container,
+.video  .container,
+.event  .container,
+.testimonial  .container,
+.newsletter .container
+{
+  animation-name: to-up;
+  animation-duration: var(--animation-duration);
+  transform: translateZ(0);
+}
+
+header .cont ,.our-left{
+  animation-name: to-right;
+  animation-duration: var(--animation-duration);
+}
+
+header .img,.our-right{
+  animation-name: to-left;
+  animation-duration: var(--animation-duration);
+}
+@keyframes to-left {
+  from{
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes to-right{
+  from{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes to-up{
+  from{
+    transform: translatey(100%);
+    opacity: 0;
+  }
+  to{
+    transform: translatey(0%);
+    opacity: 1;
+  }
+}
+/*============== animation ==============*/
