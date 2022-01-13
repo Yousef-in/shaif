@@ -75,6 +75,9 @@ nav a{
   font-weight: 500;
   color: var(--black-2);
 }
+nav .menu {
+  transition:1s;
+}
 .fa-times, .fa-bars {
   display: none;
 }
@@ -86,7 +89,7 @@ nav a{
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    width: 80%;
+    width: 200px;
     right: -80%;
     top: 0;
     padding-right: 30px;
